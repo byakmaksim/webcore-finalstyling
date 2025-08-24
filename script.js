@@ -9,14 +9,14 @@ var swiper = new Swiper('.mySwiper', {
 
 //"показать все"
 const moreButton = document.querySelector('.more');
-const sliderTrack = document.querySelector('.slider-track');
+const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-if (moreButton && sliderTrack && window.innerWidth >= 784) {
+if (moreButton && swiperWrapper && window.innerWidth >= 784) {
   moreButton.addEventListener('click', function () {
-    sliderTrack.classList.toggle('expanded');
+    swiperWrapper.classList.toggle('expanded');
     this.classList.toggle('active');
 
-    if (sliderTrack.classList.contains('expanded')) {
+    if (swiperWrapper.classList.contains('expanded')) {
       this.innerHTML = '<img src="image/expand.svg" alt="">скрыть';
     } else {
       this.innerHTML = '<img src="image/expand.svg" alt="">показать все';

@@ -50,6 +50,7 @@ header {
 }
 .swiper {
   position: static !important;
+  margin: 20px;
 }
 .mySwiper .swiper-slide {
   width: auto;
@@ -66,6 +67,7 @@ header {
     display: flex;
     justify-content: center;
     margin: 20px;
+    padding: 20px !important;
   }
   .slider-section {
     max-width: 790px;
@@ -79,28 +81,42 @@ header {
     display: flex;
   }
   .swiper-wrapper {
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    overflow: hidden;
-    max-height: 200px;
+    overflow: hidden !important;
+    max-height: 190px !important;
     transition: 0.5s ease;
     margin: 0px;
+    transform: none !important;
+    width: 100% !important;
   }
   .swiper-pagination {
     display: none;
   }
 
   .swiper-wrapper.expanded {
-    max-height: 400px;
+    max-height: 1000px !important;
   }
 
   .swiper-wrapper.expanded .slide:nth-child(n + 7) {
-    display: block;
+    display: block !important;
+  }
+  .swiper-slide {
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .more {
-    display: flex;
+    display: inline-flex;
     font-family: "TT Lakes Regular";
     padding-bottom: 20px;
     margin: 20px 0 0 20px;
@@ -124,6 +140,7 @@ header {
     display: flex;
     scrollbar-width: none;
     margin-left: 20px;
+    overflow: ;
   }
   .slider-section {
     max-width: 1120px;
@@ -134,7 +151,8 @@ header {
   .swiper-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    column-gap: 16px;
+    row-gap: 20px;
   }
   .swiper-pagination {
     display: none;
@@ -145,5 +163,13 @@ header {
   }
   .more {
     margin: 20px 0 0 30px;
+  }
+  .swiper-slide {
+    max-width: 240px;
+  }
+  .swiper-slide {
+    justify-self: center; /* Горизонтально в своей ячейке */
+    align-self: center; /* Вертикально в своей ячейке */
+    place-self: center; /* Оба направления */
   }
 }
